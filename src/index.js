@@ -2,16 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import HomePage from './HomePage'
+import BulletinBoard from './BulletinBoard'
+import Navi from './Navi'
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    <HomePage />
+    <BulletinBoard />
+    <Navi />
   </React.StrictMode>,
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// logic:
+// save each webpage as a separate component
+// have these webpages conditionally render under App.js
+// another component, Bubbles, will display bubbles on the screen that will, onHover, make stuff true or false
+// Bubbles should be called in App.js and change variables in App.js
+
