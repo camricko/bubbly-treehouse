@@ -9,9 +9,6 @@ import Navi from './Navi'
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    <HomePage />
-    <BulletinBoard />
-    <Navi />
   </React.StrictMode>,
   document.getElementById('root')
 );

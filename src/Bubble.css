@@ -1,8 +1,14 @@
+:root {
+  --bubble-size-init: 1vw;
+  --bubble-size-final: 20vw;
+  --animation-time: 2s;
+}
+
 #box-container div {
   justify-content: space-between;
 }
 
-.box-top {
+#top-grid {
   display: grid;
   position: fixed;
   width: 100vw;
@@ -11,7 +17,7 @@
   top: 0;
 }
 
-#box-bottom {
+#bottom-grid {
   display: grid;
   position: fixed;
   width: 100vw;
@@ -20,12 +26,45 @@
   bottom: 0;
 }
 
+.bubble-container{
+  width: var(--bubble-size-final);
+  height: var(--bubble-size-final);
+  animation: var(--animation-time) ease-in infinite opacity;
+}
+
 .bubble {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  top: 0px;
+  position: relative;
+  overflow: hidden;
+  width: var(--bubble-size-init);
+  height: var(--bubble-size-init);
+  border-radius: 100%;
+  top: 50%;
   left: 50%;
-  background-color: pink;
-  opacity: 70%;
+  background-color: #fc94cf;
+  opacity: 90%;
+  z-index: 0;
+  animation: var(--animation-time) linear infinite grow;
+}
+
+@keyframes grow {
+  0% { 
+    width: var(--bubble-size-init); 
+    height: var(--bubble-size-init);
+    top: 50%;
+    left: 50%;
+  }
+  100% {
+    width: var(--bubble-size-final);
+    height: var(--bubble-size-final);
+    top: 0%;
+    left: 0%;
+  }
+
+}
+
+@keyframes opacity {
+  0% {opacity: 10%}
+  5% {opacity: 100%}
+  50% {opacity: 0%}
+  100% {opacity: 0%}
 }
