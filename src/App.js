@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import './App.css';
-import Navi from './Navi'
+import BubbleFamily from './BubbleFamily'
 import BulletinBoard from './BulletinBoard'
 import HomePage from './HomePage'
 
@@ -8,7 +8,7 @@ function App() {
     return (
       <div className="App">
           <HomePage />
-          <Navi />
+          <BubbleFamily />
           <BulletinBoard />
       </div>
     );
