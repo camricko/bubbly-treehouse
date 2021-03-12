@@ -6,9 +6,10 @@ function Bubble(props) {
         <div className='bubble-container'>
             <div
                 className='bubble' 
-                id={props.id}
-                style={props.style}
-                onMouseOver={() => props.handleMouseOver(props.id)}
+                id={props.bubble.id}
+                style={props.bubble.style}
+                isHovered={props.bubble.isHovered}
+                onClick={() => props.handleMouseOver(props.bubble.id, props.bubble.isHovered)}
             >
             </div>
         </div>

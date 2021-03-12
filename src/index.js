@@ -2,9 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import HomePage from './HomePage'
-import BulletinBoard from './BulletinBoard'
-import Navi from './Navi'
 
 ReactDOM.render(
   <React.StrictMode>

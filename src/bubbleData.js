@@ -1,24 +1,16 @@
 const bubbleData = [
     {
+        id: 0,
+        style: {top: '10vh', left: '20vh'},
+        isChecked: false,
+        setBackgroundColor: 'white'
+    },
+    {
         id: 1,
-        style: {backgroundColor: 'red'}
+        style: {top: '10vh', left: '60vh'},
+        isChecked: false,
+        setBackgroundColor: 'black'
     },
-    {
-        id: 2,
-        // style: {backgroundColor: 'red'}
-    },
-    {
-        id: 3,
-        style: {backgroundColor: 'purple'}
-    },
-    {
-        id: 4,
-        style: {backgroundColor: 'magenta'}
-    },
-    {
-        id: 5,
-        style: {backgroundColor: 'white'}
-    }
 ]
 
 export default bubbleData;

@@ -1,6 +1,6 @@
 :root {
-  --bubble-size-init: 1vw;
-  --bubble-size-final: 20vw;
+  --bubble-size-init: 10px;
+  --bubble-size-final: 200px;
   --animation-time: 2s;
 }
 
@@ -29,7 +29,8 @@
 .bubble-container{
   width: var(--bubble-size-final);
   height: var(--bubble-size-final);
-  animation: var(--animation-time) ease-in infinite opacity;
+  position: absolute;
+  /* animation: var(--animation-time) ease-in infinite opacity; */
 }
 
 .bubble {
@@ -38,12 +39,12 @@
   width: var(--bubble-size-init);
   height: var(--bubble-size-init);
   border-radius: 100%;
-  top: 50%;
-  left: 50%;
+  /* top: 50%; */
+  /* left: 50%; */
   background-color: #fc94cf;
   opacity: 90%;
-  z-index: 0;
-  animation: var(--animation-time) linear infinite grow;
+  z-index: 1;
+  animation: var(--animation-time) ease-in infinite grow;
 }
 
 @keyframes grow {
@@ -59,7 +60,6 @@
     top: 0%;
     left: 0%;
   }
-
 }
 
 @keyframes opacity {
